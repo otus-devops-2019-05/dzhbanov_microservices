@@ -1,0 +1,61 @@
+version: '3.3'
+services:
+services:
+
+  node-exporter:
+    image: prom/node-exporter:v0.15.2
+    user: root
+    volumes:
+      - /proc:/host/proc:ro
+      - /sys:/host/sys:ro
+      - /:/rootfs:ro
+    command:
+      - '--path.procfs=/host/proc'
+      - '--path.sysfs=/host/sys'
+      - '--collector.filesystem.ignored-mount-points="^/(sys|proc|dev|host|etc)($$|/)"'
+    networks:
+      - front_net
+      - back_net
+
+
+  post_db:
+    env_file:
+      - .env              
+    image: mongo:3.2
+    volumes:
+      - post_db:/data/db
+    networks:
+      back_net:
+        aliases:
+          - post_db
+          - comment_db  
+  ui:
+    env_file:
+      - .env      
+    image: ${USERNAME}/ui:${UI_VERSION}
+    ports:
+      - ${UI_PORT}:9292/tcp
+    networks:
+      - front_net
+  post:
+    env_file:
+      - .env
+    image: ${USERNAME}/post:${POST_VERSION}
+    networks:
+      - front_net      
+      - back_net
+  comment:
+    env_file:
+      - .env     
+    image: ${USERNAME}/comment:${COMMENT_VERSION}
+    networks:
+      - front_net      
+      - back_net
+
+volumes:
+  post_db:
+
+networks:
+  back_net:
+  front_net:        
+

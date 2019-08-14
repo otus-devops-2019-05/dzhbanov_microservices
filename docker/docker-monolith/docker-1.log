@@ -1,0 +1,5 @@
+REPOSITORY                 TAG                 IMAGE ID            CREATED             SIZE
+dzhbanov/ubuntu-tmp-file   latest              189710a7fbae        59 seconds ago      119MB
+ubuntu                     16.04               2a697363a870        3 weeks ago         119MB
+hello-world                latest              fce289e99eb9        5 months ago        1.84kB
+контейнер создается из образа. 
