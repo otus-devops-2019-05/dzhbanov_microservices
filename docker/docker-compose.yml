@@ -30,20 +30,36 @@ services:
           - post_db
           - comment_db  
   ui:
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     env_file:
       - .env      
     image: ${USERNAME}/ui:${UI_VERSION}
     ports:
       - ${UI_PORT}:9292/tcp
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.ui
+        
     networks:
       - front_net
   post:
+    environment:
+      - ZIPKIN_ENABLED=${ZIPKIN_ENABLED}
     env_file:
       - .env
     image: ${USERNAME}/post:${POST_VERSION}
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: service.post
     networks:
       - front_net      
       - back_net
+        
   comment:
     env_file:
       - .env     

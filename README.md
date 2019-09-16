@@ -1,6 +1,14 @@
 # dzhbanov_microservices
 dzhbanov microservices repository
 
+ДЗ №8 (23)
+ветка logging-1
+- описал fluend, elasticsearch, kibana в docker-compose
+- поднял сервисы
+- настроил отправку логов в fluentd
+- Отредактировали docker/fluentd/fluent.conf для работы с GROK шаблонами. Проверили работоспособность в Kibana. Distributed tracing
+- Задал в приложениях режим работы с zipkin: ZIPKIN_ENABLED=true
+
 ДЗ №7
 ветка monitoring-2
 - Поднял Grafana
