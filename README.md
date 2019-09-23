@@ -1,6 +1,14 @@
 # dzhbanov_microservices
 dzhbanov microservices repository
 
+ДЗ №9 (24)
+Ветка kubernetes-1
+- Прошел the_hard_way. Развернул кластер
+- Подготовил описание деплойментов post, ui, comment, mongo
+- выполнил kubectl apply, убедился что поды запущены.
+
+
+
 ДЗ №8 (23)
 ветка logging-1
 - описал fluend, elasticsearch, kibana в docker-compose
