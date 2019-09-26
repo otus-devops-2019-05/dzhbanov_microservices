@@ -1,6 +1,18 @@
 # dzhbanov_microservices
 dzhbanov microservices repository
 
+ДЗ №10 (26)
+Ветка Kubernetes-2
+-Установил minikube
+- созданы манифесты в kubernetes/reddit/
+- настроены mongodb, comment, ui
+- созданые services
+- Поднял приложения. Намучился с падающими подами и таймаутами при выкачке образов. 
+- Развернул в GKE http://34.66.142.157:31092
+- Скриншот https://cdn1.savepice.ru/uploads/2019/9/26/5f5184c0c68ca6ac9b3b6480202af0b8-full.jpg
+
+
+
 ДЗ №9 (24)
 Ветка kubernetes-1
 - Прошел the_hard_way. Развернул кластер
