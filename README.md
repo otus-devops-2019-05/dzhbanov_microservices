@@ -1,6 +1,14 @@
 # dzhbanov_microservices
 dzhbanov microservices repository
 
+ДЗ №11 (27)
+Ветка Kubernetes-3
+- настроил Ingress
+- Добавил секреты
+- Настроил балансировщик
+- Network policies, persistent volumes
+-  сервис доступен https://34.95.68.65/
+
 ДЗ №10 (26)
 Ветка Kubernetes-2
 -Установил minikube
