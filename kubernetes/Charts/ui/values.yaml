@@ -4,5 +4,14 @@ service:
   externalPort: 9292
 
 image:
-  repository: dzhbanov11/ui
+  repository: chromko/ui
   tag: latest
+
+ingress:
+  class: nginx
+
+postHost:
+postPort:
+commentHost:
+commentPort:
+
