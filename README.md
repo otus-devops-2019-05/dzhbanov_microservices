@@ -1,6 +1,9 @@
 # dzhbanov_microservices
 dzhbanov microservices repository
 
+ДЗ №12 (28)
+Ветка Kubernetes-4
+
 ДЗ №11 (27)
 Ветка Kubernetes-3
 - настроил Ingress
